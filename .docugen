@@ -1,0 +1,4 @@
+#!/bin/bash
+docsteady --version
+docsteady baseline-ve DM Service jira_docugen.tex
+#docsteady baseline-ve DM Infrastructure jira_docugen.tex --details true
