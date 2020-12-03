@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % generated from JIRA project LVV
-% using template at <template>.
-% using docsteady version 1.2rc21.post0+g596756a.d20200811
+% using template at /usr/local/lib/python3.7/site-packages/docsteady/templates/dm-ve.latex.jinja2.
+% using docsteady version 1.2rc24
 % Please do not edit -- update information in Jira instead
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -60,7 +60,7 @@ DMS-REQ-0066 & Keep Exposure Archive \\
 \toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T20}{LVV-T20} & \multicolumn{4}{p{12cm}}{ AG-00-15: Scientific Verification of Difference Images } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Eric Bellm & Approved & 1 & false & Test \\ \hline
+Eric Bellm & Deprecated & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -192,11 +192,28 @@ Requirement ID & DMS-REQ-0078 \\ \cdashline{1-2}
 Requirement Description &
 \begin{minipage}[]{13cm}
 \textbf{Specification:} The DMS catalog archive shall provide catalog
-data and associated metadata on request in community standard formats: *
-Comma-separated ASCII text * eXtensible Markup Language (XML) format,
-including VOTable
-(\url{http://www.ivoa.net/twiki/bin/view/IVOA/IvoaVOTable}), and * FITS
-tables.
+data and associated metadata on request in community standard formats:
+
+\begin{itemize}
+\tightlist
+\item
+  Comma-separated ASCII text
+\item
+  IVOA VOTable format, version 1.4 or later, supporting at least the
+  XML-based TABLEDATA payload format
+\item
+  FITS tables.
+\end{itemize}
+\end{minipage}
+\\ \cdashline{1-2}
+Requirement Discussion &
+\begin{minipage}[]{13cm}
+\textbf{Discussion:} The VOTable 1.4 standard is available at
+\url{http://www.ivoa.net/Documents/VOTable/20191021}. It is likely that
+additional VOTable payload formats will be supported, including BINARY2.
+``Associated metadata'' for catalogs should include catalog schema and
+temporal and spatial coordinate-system definitions. Full metadata will
+likely only be available in the VOTable format.
 \end{minipage}
 \\ \cdashline{1-2}
 Requirement Priority & 1a \\ \cdashline{1-2}
@@ -215,7 +232,7 @@ OSS-REQ-0176 & Data Access \\
 \toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T151}{LVV-T151} & \multicolumn{4}{p{12cm}}{ Verify Implementation of Catalog Export Formats From the Notebook Aspect } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Colin Slater & Defined & 1 & false & Test \\ \hline
+Colin Slater & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -226,7 +243,7 @@ variety of community-standard formats.
 \toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1232}{LVV-T1232} & \multicolumn{4}{p{12cm}}{ Verify Implementation of Catalog Export Formats From the Portal Aspect } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Colin Slater & Defined & 1 & false & Test \\ \hline
+Colin Slater & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -1076,7 +1093,7 @@ OSS-REQ-0121 & Open Source, Open Configuration \\
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T10}{LVV-T10} & \multicolumn{4}{p{12cm}}{ DRP-00-00: Installation of the Data Release Production v14.0 science
 payload } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Jim Bosch & Approved & 1 & false & Test \\ \hline
+Jim Bosch & Deprecated & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -1096,7 +1113,7 @@ This test will check:
 \toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T17}{LVV-T17} & \multicolumn{4}{p{12cm}}{ AG-00-00: Installation of the Alert Generation v16.0 science payload. } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Eric Bellm & Approved & 1 & false & Test \\ \hline
+Eric Bellm & Deprecated & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -1154,7 +1171,7 @@ This test will check:\\
 \toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T362}{LVV-T362} & \multicolumn{4}{p{12cm}}{ Installation of the LSST Science Pipelines Payloads } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-John Swinbank & Draft & 1 & false & Test \\ \hline
+John Swinbank & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -1187,7 +1204,7 @@ single ``meta-package'', lsst\_distrib.
 \toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T363}{LVV-T363} & \multicolumn{4}{p{12cm}}{ Science Pipelines Release Documentation } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-John Swinbank & Draft & 1 & false & Inspection \\ \hline
+John Swinbank & Approved & 1 & false & Inspection \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -1844,6 +1861,7 @@ Gregory Dubois-Felsmann & Not Covered &
 \begin{tabular}{c}
 LVV-T27 \\
 LVV-T286 \\
+LVV-T1934 \\
 \end{tabular}
 \\
 \hline
@@ -1920,6 +1938,17 @@ This Test Case shall be repeated for each of the different cameras
 combination.\\[2\baselineskip]Note: For a complete check of the various
 aspects of what it means for a raw image to be in the Data Backbone, see
 the tests for the Data Backbone.
+}
+\begin{longtable}{p{3cm}p{2.5cm}p{2.5cm}p{3cm}p{4cm}}
+\toprule
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1934}{LVV-T1934} & \multicolumn{4}{p{12cm}}{ ComCam Data Transfer and Ingestion } \\ \hline
+\textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
+Robert Gruendl & Draft & 1 & true & Inspection \\ \hline
+\end{longtable}
+{\scriptsize
+\textbf{Objective:}\\
+Verify that ComCam Archiver data taken are transferred to NCSA Data
+BackBone endpoint and Ingested
 }
   
  \newpage 
@@ -24283,7 +24312,7 @@ Upper Level Requirement &
 \toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1264}{LVV-T1264} & \multicolumn{4}{p{12cm}}{ Verify implementation of archiving camera test data } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Robert Gruendl & Defined & 1 & false & Test \\ \hline
+Robert Gruendl & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -26080,7 +26109,7 @@ and user storage resources.~
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -26209,7 +26238,7 @@ through multiple aspects.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -26240,7 +26269,7 @@ level of partial capability during construction.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -26270,7 +26299,7 @@ level of partial capability during construction.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -26366,7 +26395,7 @@ products and user storage resources.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -26483,7 +26512,7 @@ The Portal is defined by further requirements.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -26581,7 +26610,7 @@ standards for public APIs.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -26612,7 +26641,7 @@ level of partial capability during construction.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -26642,7 +26671,7 @@ level of partial capability during construction.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -28072,7 +28101,7 @@ Upper Level Requirement &
 \toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T622}{LVV-T622} & \multicolumn{4}{p{12cm}}{ Verify LSP only available to authenticated users } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Jeffrey Carlin & Defined & 1 & false & Inspection \\ \hline
+Jeffrey Carlin & Approved & 1 & false & Inspection \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -28084,7 +28113,7 @@ are accessible only to authenticated users.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -28115,7 +28144,7 @@ level of partial capability during construction.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -28145,7 +28174,7 @@ level of partial capability during construction.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -28241,7 +28270,7 @@ LSP using the same credentials.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -28272,7 +28301,7 @@ level of partial capability during construction.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -28302,7 +28331,7 @@ level of partial capability during construction.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -28513,7 +28542,7 @@ from trusted identity providers.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -28544,7 +28573,7 @@ level of partial capability during construction.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -28574,7 +28603,7 @@ level of partial capability during construction.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -28659,7 +28688,7 @@ providers, associated with the same identity within the LSP.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -28690,7 +28719,7 @@ level of partial capability during construction.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -28720,7 +28749,7 @@ level of partial capability during construction.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -28812,7 +28841,7 @@ accordance with LSST cybersecurity policy.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -29140,7 +29169,7 @@ software.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -29478,7 +29507,7 @@ Workspace.
 \toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1818}{LVV-T1818} & \multicolumn{4}{p{12cm}}{ DM-SUIT-8: Verify Portal integration with workspace (via WebDAV) } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Demonstration \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Demonstration \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -30132,7 +30161,7 @@ table, including user-supplied tables.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -30259,7 +30288,7 @@ metadata.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -30353,7 +30382,7 @@ tabular data exposed in the API aspect.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -31032,7 +31061,7 @@ coordinates on the sky.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -32231,7 +32260,7 @@ visualized.
 \toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1818}{LVV-T1818} & \multicolumn{4}{p{12cm}}{ DM-SUIT-8: Verify Portal integration with workspace (via WebDAV) } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Demonstration \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Demonstration \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -32660,7 +32689,7 @@ table data by columns and rows.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -35183,7 +35212,7 @@ the content, filtering, and sorting.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -35213,7 +35242,7 @@ level of partial capability during construction.
 \toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1818}{LVV-T1818} & \multicolumn{4}{p{12cm}}{ DM-SUIT-8: Verify Portal integration with workspace (via WebDAV) } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Demonstration \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Demonstration \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -36295,7 +36324,7 @@ displaying images and screens displaying lists of image metadata.
 \toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1818}{LVV-T1818} & \multicolumn{4}{p{12cm}}{ DM-SUIT-8: Verify Portal integration with workspace (via WebDAV) } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Demonstration \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Demonstration \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -36515,7 +36544,7 @@ catalog or image metadata.
 \toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1818}{LVV-T1818} & \multicolumn{4}{p{12cm}}{ DM-SUIT-8: Verify Portal integration with workspace (via WebDAV) } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Demonstration \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Demonstration \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -37552,7 +37581,7 @@ interactive interpreter.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -37695,7 +37724,7 @@ the Unix shell environment. This includes things like .bashrc,
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -37890,7 +37919,7 @@ shell with the same environment as the interactive Python environment.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -38149,7 +38178,7 @@ use standard VO services to access LSST Data Releases.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -39106,7 +39135,7 @@ performed in the Portal Aspect.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -39255,7 +39284,7 @@ authorization service.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -39394,7 +39423,7 @@ Verify that the Notebook Aspect is accessible through an HTTPS endpoint.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1436}{LVV-T1436} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -39525,7 +39554,7 @@ Release catalog data via TAP ADQL queries.~
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -40103,7 +40132,7 @@ query language.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -40198,7 +40227,7 @@ described by the IVOA TAP 1.1 specification.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -40276,7 +40305,7 @@ Upper Level Requirement &
 \toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T807}{LVV-T807} & \multicolumn{4}{p{12cm}}{ Verify synchronous TAP queries } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Jeffrey Carlin & Defined & 1 & false & Inspection \\ \hline
+Jeffrey Carlin & Approved & 1 & false & Inspection \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -40288,7 +40317,7 @@ described by the IVOA TAP 1.1 specification. ~ ~
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -40371,7 +40400,7 @@ IVOA TAP 1.1 for the purpose of accessing tabularly structured data.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -40619,7 +40648,7 @@ asynchronous query services.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -41517,7 +41546,7 @@ the purpose of establishing user identity. ~
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -41600,7 +41629,7 @@ infrastructure for the purpose of establishing authorized use.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -41733,7 +41762,7 @@ endpoints.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LVV-T1437} & \multicolumn{4}{p{12cm}}{ LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone } \\ \hline
 \textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
-Gregory Dubois-Felsmann & Defined & 1 & false & Test \\ \hline
+Gregory Dubois-Felsmann & Approved & 1 & false & Test \\ \hline
 \end{longtable}
 {\scriptsize
 \textbf{Objective:}\\
@@ -43265,7 +43294,13 @@ streams that can be transmitted out of the alert distribution system.,
 \textbf{OTT1 = 1{{[}minute{]}}} The latency of reporting optical
 transients following the completion of readout of the last image of a
 visit{]} \\ \cdashline{1-2}
-Requirement Priority &  \\ \cdashline{1-2}
+Requirement Discussion &
+\begin{minipage}[]{13cm}
+\textbf{Discussion:} This requirement establishes the minimum capacity
+needed for timely transmission of alerts to community brokers.
+\end{minipage}
+\\ \cdashline{1-2}
+Requirement Priority & 2 \\ \cdashline{1-2}
 Upper Level Requirement &
 \begin{tabular}{cl}
 OSS-REQ-0184 & Transient Alert Publication \\
@@ -43464,6 +43499,9 @@ LVV-T27 \\
  &
  &
 LVV-T286 \\
+ &
+ &
+LVV-T1934 \\
 \hline
  DMS-REQ-0353  &
  LVV-184  &
