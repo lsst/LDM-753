@@ -47,3 +47,8 @@ meta.tex: Makefile .FORCE
 	/bin/echo '\newcommand{\lsstDocNum}{$(DOCNUMBER)}' >>$@
 	/bin/echo '\newcommand{\vcsRevision}{$(GITVERSION)$(GITDIRTY)}' >>$@
 	/bin/echo '\newcommand{\vcsDate}{$(GITDATE)}' >>$@
+
+generate: .FORCE
+        docsteady baseline-ve jira_docugen.tex
+
+
