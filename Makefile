@@ -49,6 +49,6 @@ meta.tex: Makefile .FORCE
 	/bin/echo '\newcommand{\vcsDate}{$(GITDATE)}' >>$@
 
 generate: .FORCE
-        docsteady baseline-ve jira_docugen.tex
+	docsteady baseline-ve jira_docugen.tex
 
 
